@@ -16,6 +16,13 @@ Sonos Web has been tested on Windows 10, macOS, Linux, and Raspbian Stretch Lite
 
 Docker images are available at [https://hub.docker.com/r/sonosweb/sonos-web](https://hub.docker.com/r/sonosweb/sonos-web) and are automatically generated from this repository.
 
+To run the docker image in the background use the following command:
+
+```bash
+docker run -d -p 5050:5050 sonosweb/sonos-web
+```
+And then connect to http://<IP>:5050
+
 ### Windows & Mac
 
 Unfortunately, Linux is the only supported OS for using Docker with sonos-web because of the need to use `network_mode: 'host'` for discovering the Sonos network. It seems that, at least for now, [only Linux machines](https://docs.docker.com/network/network-tutorial-host/#prerequisites) have proper support at this point for that feature.
